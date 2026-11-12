@@ -39,7 +39,7 @@ body:
       description: The steps from the user's action to the result.
       placeholder: |
         1. Developer adds an Application manifest to Git
-        2. ArgoCD deploys the LLM gateway, model server and vector DB
+        2. Flux deploys the LLM gateway, model server and vector DB
         3. User sends a question through the Gateway
         4. Trace and cost of the request appear in Grafana / OpenCost
     validations:
