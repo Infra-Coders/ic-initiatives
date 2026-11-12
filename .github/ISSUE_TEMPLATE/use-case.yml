@@ -1,0 +1,100 @@
+name: 💡 Use case proposal
+description: Propose an end-to-end use case to build on (or into) the InfraCoders platform
+title: "[Use case]: "
+labels: ["type/use-case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a use case! Both kinds are welcome:
+
+        - **Platform consumer**: something you want to *run on top of* the platform (e.g. a RAG chatbot over team docs).
+        - **Platform builder**: a capability you want to *build into* the platform (e.g. zero-touch cluster bootstrap from Git, mTLS with Ambient Mesh).
+
+        Keep it short. You can refine it in the comments.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Type
+      options:
+        - Platform consumer (run something on the platform)
+        - Platform builder (build a platform capability)
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: One or two sentences. What should be possible when this is done?
+      placeholder: Run a chatbot that answers questions about our docs, fully deployed through GitOps, with traces and cost visible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: flow
+    attributes:
+      label: End-to-end flow
+      description: The steps from the user's action to the result.
+      placeholder: |
+        1. Developer adds an Application manifest to Git
+        2. ArgoCD deploys the LLM gateway, model server and vector DB
+        3. User sends a question through the Gateway
+        4. Trace and cost of the request appear in Grafana / OpenCost
+    validations:
+      required: true
+
+  - type: dropdown
+    id: areas
+    attributes:
+      label: Areas
+      description: Which areas of the platform does this touch?
+      multiple: true
+      options:
+        - Platform Foundations & Shared Services
+        - Networking & Traffic Management
+        - AI Infrastructure
+        - Platform Engineering & GitOps
+        - AI-driven Operations & Operators
+        - Platform Economics & FinOps
+    validations:
+      required: true
+
+  - type: textarea
+    id: primitives
+    attributes:
+      label: Primitives used or needed
+      description: Existing ic-* components it relies on, and new ones it would need.
+      placeholder: |
+        Uses: ic-gitops-bootstrap, ic-ingress-stack, ic-monitoring-stack
+        Needs: LLM gateway, vector DB
+    validations:
+      required: false
+
+  - type: textarea
+    id: demo
+    attributes:
+      label: Definition of done / demo
+      description: What would you show at a demo to prove it works?
+    validations:
+      required: true
+
+  - type: textarea
+    id: learn
+    attributes:
+      label: What do you want to learn?
+      description: Skills or technologies you want to get hands-on with.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: ownership
+    attributes:
+      label: Ownership
+      options:
+        - I want to own / lead this
+        - I want to contribute, but not lead
+        - Just an idea, looking for an owner
+    validations:
+      required: true
