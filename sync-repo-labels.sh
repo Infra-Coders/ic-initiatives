@@ -20,6 +20,7 @@ LABELS=(
   "type/task|Implementation task"
   "type/learning|Learning / educational task"
   "type/spike|Spike / research"
+  "type/use-case|End-to-end use case proposal"
   "area/kubernetes|Kubernetes related"
   "area/security|Security related"
   "area/pki|PKI and certificates"

@@ -1,3 +1,24 @@
+# ic-initiatives
+
+Home for **InfraCoders initiatives and use cases**, plus shared org tooling.
+
+## 💡 Use Cases
+
+We grow the platform through end-to-end use cases. Two kinds are welcome:
+
+| Type | Goal | Example |
+|------|------|---------|
+| **Platform consumer** | Run something *on top of* the platform | RAG chatbot over team docs: vector DB, LLM gateway, tracing |
+| **Platform builder** | Build a capability *into* the platform | Zero-touch cluster bootstrap from Git, mTLS with Ambient Mesh |
+
+Builder use cases create primitives. Consumer use cases prove those
+primitives work together.
+
+👉 [**Propose a use case**](https://github.com/Infra-Coders/ic-initiatives/issues/new?template=use-case.yml)
+· [Browse proposals](https://github.com/Infra-Coders/ic-initiatives/issues?q=label%3Atype%2Fuse-case)
+
+---
+
 # GitHub Label Sync (Infra-Coders)
 
 Minimal tooling to **enforce and replicate GitHub labels** across all repositories
